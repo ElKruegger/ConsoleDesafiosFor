@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+
+            
             #region Basica
 
 
@@ -174,7 +176,7 @@
 
 
             #endregion Basica
-
+            
 
 
             #region Intermediario
@@ -397,9 +399,109 @@
             Console.Clear();
 
 
-
+            
             #endregion Intermediario
+            
 
+            #region Avancado
+
+
+            //   Crie um programa que ordena um array de números usando o algoritmo de ordenação de bolha com um loop for.
+            // Inacabado
+
+            Console.WriteLine(" Um programa que ordena um array de numeros usando o algoritmo de ordenação de bolha com um loop for");
+
+
+            // Escreva um programa que encontre o caminho mais curto em um labirinto usando o algoritmo de busca em profundidade e um loop for.
+
+
+
+            //Escreva um programa que leia uma string e imprima o número de palavras na string usando um loop foreach.
+
+
+
+
+
+
+            // Aulas do garcia !
+
+            Console.WriteLine(" Um programa que leia uma string e leia o numero de palavras na string usando um loop foreach");
+            Console.WriteLine(" Digite uma frase, palavra, etc...");
+            var frase = Console.ReadLine();
+            char[] separadores = { ' ', ',', '.' };
+
+            string[] palavrasSplit = frase.Split(separadores);
+            int contadorpalavras = 0;
+
+            foreach (var c in palavrasSplit)
+            {
+                contadorpalavras++;
+            }
+            Console.WriteLine($" A frase contém {contadorpalavras} palavras. . . ");
+            Console.ReadKey();
+            Console.Clear();
+
+            // Crie um programa que calcule a média, a variância e o desvio padrão de uma lista de números usando loops for.
+
+
+            // Faça um programa que leia uma string e a imprima sem espaços usando um loop foreach.
+
+            Console.WriteLine(" Um programa que leia uma string e imprima a mesma sem espaços usando um loop foreach. . .");
+            Console.WriteLine(" Digite uma frase ou palavra com espaçamento..");
+            var palavracomespaco = Console.ReadLine();
+
+            //var palavraSemEspaco = palavracomespaco.Replace(" ", "");
+
+            foreach (var c in palavracomespaco.Replace(" ", ""))
+            {
+                Console.WriteLine($" A frase sem os espaçamentos é : {c}");
+            }
+
+            Console.ReadKey();
+            Console.Clear();
+
+
+
+
+            // Escreva um programa em C# que leia uma lista de números e imprima a soma dos números pares e a soma dos números ímpares usando um loop for.
+            Console.WriteLine(" Um programa que le uma lista de numeros e imprime a soma dos numeros pares e impares usando for");
+            Console.WriteLine("Digite uma lista de números separados por espaços:");
+            string[] numerosString = Console.ReadLine().Split(' ');
+
+            int somaPares = 0;
+            int somaImpares = 0;
+
+            foreach (string numeroString in numerosString)
+            {
+                if (int.TryParse(numeroString, out int numero))
+                {
+                    if (numero % 2 == 0)
+                    {
+
+                        somaPares += numero;
+                    }
+
+                    else
+                    {
+
+                        somaImpares += numero;
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine($"Valor inválido: '{numeroString}'. Ignorando.");
+                }
+            }
+
+            Console.WriteLine($"Soma dos números pares: {somaPares}");
+            Console.WriteLine($"Soma dos números ímpares: {somaImpares}");
         }
+
+        // Crie um programa que leia um número n e imprima o n-ésimo número primo usando um loop for.
+
+
+
+        #endregion Avancado
     }
 }
