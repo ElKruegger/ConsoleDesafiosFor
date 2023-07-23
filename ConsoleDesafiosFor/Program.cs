@@ -1,11 +1,15 @@
-﻿namespace ConsoleDesafiosFor
+﻿using System.Diagnostics.Metrics;
+using System.Runtime.CompilerServices;
+using System.Threading.Channels;
+
+namespace ConsoleDesafiosFor
 {
     internal class Program
     {
         static void Main(string[] args)
         {
 
-            
+
             #region Basica
 
 
@@ -176,7 +180,7 @@
 
 
             #endregion Basica
-            
+
 
 
             #region Intermediario
@@ -399,9 +403,9 @@
             Console.Clear();
 
 
-            
+
             #endregion Intermediario
-            
+
 
             #region Avancado
 
@@ -417,12 +421,6 @@
 
 
             //Escreva um programa que leia uma string e imprima o número de palavras na string usando um loop foreach.
-
-
-
-
-
-
             // Aulas do garcia !
 
             Console.WriteLine(" Um programa que leia uma string e leia o numero de palavras na string usando um loop foreach");
@@ -496,12 +494,51 @@
 
             Console.WriteLine($"Soma dos números pares: {somaPares}");
             Console.WriteLine($"Soma dos números ímpares: {somaImpares}");
+
+            Console.ReadKey();
+            Console.Clear();
+
+
+
+            // Crie um programa que leia um número n e imprima o n-ésimo número primo usando um loop for.
+
+            Console.WriteLine(" Um programa que lê um numero n e imprime o n-ésimo numero primo usando loop for ");
+            Console.WriteLine(" Digite um número !");
+            var nmrPrimo = Convert.ToInt32(Console.ReadLine());
+
+            int contador = 0;
+            int NmrAtual = 2;
+
+            while (contador < n)
+            {
+                if (metodosfor.Eprimo(NmrAtual))
+                {
+                    contador++;
+                }
+
+                NmrAtual++;
+            }
+
+            Console.WriteLine($"O {n}-ésimo número primo é: {NmrAtual - 1}");
+            Console.ReadKey();
+            Console.Clear();
+
+
+
+            // Faça um programa que leia uma string e conte o número de cada letra na string usando um loop foreach.
+            Console.WriteLine(" Um programa que leia uma string e conte o numero de cada letra na string usando loop foreach");
+            Console.WriteLine(" Digite uma palavra : ");
+
+
+
+
+
+
+            // Escreva um programa em C# que leia um texto e encontre a palavra mais frequente no texto usando um loop foreach.
+
+
         }
-
-        // Crie um programa que leia um número n e imprima o n-ésimo número primo usando um loop for.
-
-
-
-        #endregion Avancado
     }
+    #endregion Avancado
 }
+
