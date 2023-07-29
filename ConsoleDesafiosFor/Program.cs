@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics.Metrics;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using System.Threading.Channels;
 
 namespace ConsoleDesafiosFor
@@ -11,8 +13,8 @@ namespace ConsoleDesafiosFor
 
 
             #region Basica
-
-
+            /*
+            // Exercicio 1.
             // Escreva um programa em C# que imprima todos os números de 1 a 10 usando um loop for.
 
             Console.WriteLine("Escrever um programa que imprima numeros de 1 a 10.");
@@ -24,7 +26,7 @@ namespace ConsoleDesafiosFor
             Console.ReadKey();
             Console.Clear();
 
-
+            // Exercicio 2
             // Escreva um programa em C# que imprima todos os números pares entre 1 e 20 usando um loop for.
 
             Console.WriteLine("Um programa que imprime os numeros pares entre o numero 1 e o numero 20.");
@@ -36,7 +38,7 @@ namespace ConsoleDesafiosFor
             Console.ReadKey();
             Console.Clear();
 
-
+            // Exercicio 3
             // Crie um programa que multiplique todos os números em um array de 5 elementos usando um loop for.
             Console.WriteLine(" Um programa que multiplica todos os nuemros de umarrayde 5 elementos em um loop : ");
             int[] numeros = { 2, 4, 6, 8, 10 };
@@ -52,7 +54,7 @@ namespace ConsoleDesafiosFor
             Console.ReadKey();
             Console.Clear();
 
-
+            // Exercicio 4
             // Escreva um programa que peça ao usuário para digitar 10 números e, em seguida, use um loop for para somar todos eles e imprimir o resultado.
             Console.WriteLine(" Insira 10 números no console onde todos eles serão somados e os resultados exibidos já somados :");
 
@@ -79,7 +81,7 @@ namespace ConsoleDesafiosFor
 
 
 
-
+            // Exercicio 5
             // Crie um programa em C# que imprima a tabuada de qualquer número escolhido pelo usuário utilizando o loop for.
 
             Console.WriteLine(" Digite um número pra acessar a tabuada no loop for :");
@@ -93,6 +95,7 @@ namespace ConsoleDesafiosFor
             Console.ReadKey();
             Console.Clear();
 
+            // Exercicio 6
             // Crie um programa que imprima todos os elementos de uma lista de strings utilizando um loop foreach.
 
             Console.WriteLine(" Um programa que imprime os elementos de uma lista de strings, usando loop foreach : ");
@@ -105,6 +108,7 @@ namespace ConsoleDesafiosFor
             Console.ReadKey();
             Console.Clear();
 
+            // Exercicio 7
             // Faça um programa que peça ao usuário para digitar 5 nomes. Armazene esses nomes em uma lista e use um loop foreach para imprimir todos os nomes.
             Console.WriteLine(" Digite 5 nomes para o programa, eles serão listados por um foreach ;) ");
 
@@ -125,6 +129,7 @@ namespace ConsoleDesafiosFor
             Console.Clear();
 
 
+            // Exercicio 8
             // Escreva um programa em C# que imprima os números ímpares entre 1 e 10 usando um loop foreach em uma lista.
             Console.WriteLine(" Um programa que escreve os numeros ímpares entre 1 e 10 em um loop foreach em uma lista : ");
 
@@ -136,6 +141,7 @@ namespace ConsoleDesafiosFor
             Console.Clear();
 
 
+            // Exercicio 9
             // Crie um programa que multiplique todos os números em um array de 5 elementos usando um loop foreach.
 
             Console.WriteLine(" Um programa que multiplica todos os numeros de um array de 5 elementos usando um loop foreach :");
@@ -151,7 +157,7 @@ namespace ConsoleDesafiosFor
             Console.Clear();
 
 
-
+            // Exercicio 10
             // Crie um programa que peça ao usuário para digitar vários nomes até que ele digite "pare". Em seguida, use um loop foreach para imprimir todos os nomes.
             Console.WriteLine(" Um programa que peça ao usuario para digitar varios numes até que seja digitado PARE, em seguida o programa lista os nomes.");
 
@@ -177,14 +183,15 @@ namespace ConsoleDesafiosFor
             Console.Clear();
 
 
-
+            */
 
             #endregion Basica
 
 
 
             #region Intermediario
-
+            /*
+            // // Exercicio 11
             // Crie um programa que leia uma matriz de 10x10 e imprima todos os seus elementos usando loops for aninhados.
             Console.WriteLine("A seguir um programa que lê uma matriz 10x10 e imprime todos os seus elementos usando loops for aninhados");
 
@@ -206,7 +213,7 @@ namespace ConsoleDesafiosFor
             Console.Clear();
 
 
-
+            // Exercicio 12
             // Escreva um programa que calcule a soma dos números em uma matriz 2D usando loops for aninhados.
             int[,] calculoarray = new int[10, 10];
             int valorExDois = 1;
@@ -222,7 +229,7 @@ namespace ConsoleDesafiosFor
                 }
             }
 
-
+            // Exercicio 13
             // Crie um programa que peça ao usuário para inserir 5 nomes e 5 idades correspondentes. Em seguida, use um loop foreach para imprimir o nome e a idade de cada pessoa.
             Console.WriteLine(" Um programa que pede ao usuario 5 nomes e 5 idades correspondentes, em seguida, um loop foreach para cada nome e a idade da pessoa : ");
             Console.WriteLine(" Digite um nome : ");
@@ -258,6 +265,7 @@ namespace ConsoleDesafiosFor
                 Console.WriteLine($" Idades : {colidade}");
             }
 
+            // Exercicio 14
             // Escreva um programa em C# que some todos os números ímpares em uma lista usando um loop foreach.
 
             Console.WriteLine(" Um programa que some todos os numeros impares de uma lista usando loop foreach");
@@ -276,7 +284,7 @@ namespace ConsoleDesafiosFor
             Console.WriteLine($"Lista dos impares somados{SomaImpares}");
 
 
-
+            // Exercicio 15
             //Crie um programa que peça ao usuário para digitar um número n e depois use um loop for para calcular o fatorial de n.
             Console.WriteLine("Um programa que peça ao usuario pra digitar um numero n e depois use um loop pra calcular o fatorial de N");
             Console.WriteLine("Digite um número...");
@@ -297,6 +305,7 @@ namespace ConsoleDesafiosFor
                 Console.WriteLine($"O fatorial de {nmrinserido} é {nmrfatorial}");
             }
 
+            // Exercicio 16
             //Escreva um programa que inverta uma string usando um loop for.
 
             Console.WriteLine(" Um programa que inverte uma string usando loop for. . . socorro Deus");
@@ -315,11 +324,10 @@ namespace ConsoleDesafiosFor
 
 
 
+
+            // Exercicio 17
             //  Crie um programa que leia uma lista de números do usuário e imprima o menor e o maior número da lista usando loops for ou foreach.
-
-
             Console.WriteLine("Um programa que leia uma lista de numeros do usuario e imprima o menor e o maior numero da lista usando loop for ou foreach");
-
             Console.WriteLine(" Usuário, digite uma sequência de números para armazenar...");
 
 
@@ -333,18 +341,27 @@ namespace ConsoleDesafiosFor
                 listex17.Add(numeroex17);
             }
 
+            int maior = listex17[0];
+            int menor = listex17[0];
 
-            int maior = int.MaxValue;
-            int menor = int.MinValue;
-
-            foreach (int numeross in listex17)
+            for (int i = 1; i < listex17.Count; i++)
             {
-
+                if (listex17[i] > maior)
+                {
+                    maior = listex17[i];
+                }
+                if (listex17[i] < menor)
+                {
+                    menor = listex17[i];
+                }
             }
-            // Terminar código
+
+            Console.WriteLine($" O maior numero da lista é {maior} e o menor número é {menor}");
+            Console.ReadKey();
+            Console.Clear();
 
 
-
+            // Exercicio 18
             // Faça um programa que leia uma string e conte o número de vogais na string usando um loop foreach.
 
             Console.WriteLine(" Um programa que le uma string e conte o numero de vogais usando um loop foreach");
@@ -364,7 +381,7 @@ namespace ConsoleDesafiosFor
             Console.ReadKey();
             Console.Clear();
 
-
+            // Exercicio 19
             //Crie um programa que peça ao usuário para digitar um número n e então imprima a sequência de Fibonacci até o n-ésimo termo usando um loop for.
 
 
@@ -384,7 +401,7 @@ namespace ConsoleDesafiosFor
             Console.Clear();
 
 
-
+            // Exercicio 20
             // Escreva um programa que leia uma string e a imprima em ordem reversa usando um loop foreach.
 
             Console.WriteLine("Um programa que lê uma string e imprime a ordem reversa usando loop foreach");
@@ -403,23 +420,62 @@ namespace ConsoleDesafiosFor
             Console.Clear();
 
 
-
+            */
             #endregion Intermediario
 
 
             #region Avancado
-
-
+            /*
+            
+            // Exercicio 21
             //   Crie um programa que ordena um array de números usando o algoritmo de ordenação de bolha com um loop for.
-            // Inacabado
+            // https://www.youtube.com/watch?v=bzwD7qDC-FY
 
+
+            int[] ArrX = new int[] { 1, 7, 4, 6, 2, 3, 1, 9, 10, 40, 23, 44, 55, 100 };
+            foreach (var nmrDesordenado in ArrX)
+            {
+                Console.WriteLine(nmrDesordenado);
+            }
             Console.WriteLine(" Um programa que ordena um array de numeros usando o algoritmo de ordenação de bolha com um loop for");
+            metodosfor.bubbleSort(ArrX);
+            foreach (var nmrOrdenado in ArrX)
+            {
+                Console.WriteLine(nmrOrdenado);
+            }
+            Console.ReadKey();
+            Console.Clear();
+            */
 
 
+            // Exercicio 22
             // Escreva um programa que encontre o caminho mais curto em um labirinto usando o algoritmo de busca em profundidade e um loop for.
 
 
+            
+            // Exercicio 23
+            // Base do código : https://cursos.alura.com.br/forum/topico-pegar-numeros-primos-de-uma-lista-214928
+            // Faça um programa que peça ao usuário para inserir uma série de números e então use um loop for para encontrar todos os números primos na série.
+            Console.WriteLine(" Um programa que peça uma serie de numeros e use um loop for pra encontrar todos os numeros primos na serie");
+            Console.WriteLine(" Digite uma série de numeros divididos por espaçamento..");
+            var InputEx23 = Console.ReadLine();
+            var InputSplitado = InputEx23.ToString().Split(' ');
 
+            for (int i = 0; i < InputSplitado.Length; i++)
+            {
+                int numero = Convert.ToInt32(InputSplitado[i]);
+
+                if (metodosfor.Eprimo(numero))
+                {
+                    Console.WriteLine($"{numero} é um número primo");
+                }
+            }
+            Console.ReadKey();
+            Console.Clear();
+
+
+
+            // Exercicio 24
             //Escreva um programa que leia uma string e imprima o número de palavras na string usando um loop foreach.
             // Aulas do garcia !
 
@@ -439,28 +495,55 @@ namespace ConsoleDesafiosFor
             Console.ReadKey();
             Console.Clear();
 
+            
+            // Exercicio 25
+
             // Crie um programa que calcule a média, a variância e o desvio padrão de uma lista de números usando loops for.
+            Console.WriteLine(" Um programa que calcula a média, a variância e o desvio padrao de uma lista de numeros usando loops for");
+            List<double> listex25 = new List<double>() { 10, 15, 20, 30, 45, 50 };
+            // Média
+            double soma = 0;
+            foreach (double numero in listex25)
+            {
+                soma += numero;
+            }
+            double media = soma / listex25.Count;
+
+            // variança capeta
+            double somaDosQuadradosDasDiferencas = 0;
+            foreach (double numero in listex25)
+            {
+                double diferenca = numero - media;
+                somaDosQuadradosDasDiferencas += diferenca * diferenca;
+            }
+            double variancia = somaDosQuadradosDasDiferencas / listex25.Count;
+
+            // desvio padrao
+            // classe Math por que não tankei a matematica no braço
+            double desvioPadrao = Math.Sqrt(variancia); 
+
+            Console.WriteLine($"Números: {string.Join(", ", listex25)}");
+            Console.WriteLine($"Média: {media}");
+            Console.WriteLine($"Variância: {variancia}");
+            Console.WriteLine($"Desvio Padrão: {desvioPadrao}");
 
 
+            // Exercicio 26
             // Faça um programa que leia uma string e a imprima sem espaços usando um loop foreach.
 
             Console.WriteLine(" Um programa que leia uma string e imprima a mesma sem espaços usando um loop foreach. . .");
             Console.WriteLine(" Digite uma frase ou palavra com espaçamento..");
             var palavracomespaco = Console.ReadLine();
+            palavracomespaco = palavracomespaco.Replace(" ", "");
 
-            //var palavraSemEspaco = palavracomespaco.Replace(" ", "");
-
-            foreach (var c in palavracomespaco.Replace(" ", ""))
-            {
-                Console.WriteLine($" A frase sem os espaçamentos é : {c}");
-            }
+            Console.WriteLine($" A frase sem os espaçamentos é : {palavracomespaco}");
 
             Console.ReadKey();
             Console.Clear();
 
 
 
-
+            // Exercicio 27
             // Escreva um programa em C# que leia uma lista de números e imprima a soma dos números pares e a soma dos números ímpares usando um loop for.
             Console.WriteLine(" Um programa que le uma lista de numeros e imprime a soma dos numeros pares e impares usando for");
             Console.WriteLine("Digite uma lista de números separados por espaços:");
@@ -499,7 +582,7 @@ namespace ConsoleDesafiosFor
             Console.Clear();
 
 
-
+            // Exercicio 28
             // Crie um programa que leia um número n e imprima o n-ésimo número primo usando um loop for.
 
             Console.WriteLine(" Um programa que lê um numero n e imprime o n-ésimo numero primo usando loop for ");
@@ -509,7 +592,7 @@ namespace ConsoleDesafiosFor
             int contador = 0;
             int NmrAtual = 2;
 
-            while (contador < n)
+            while (contador < NmrAtual)
             {
                 if (metodosfor.Eprimo(NmrAtual))
                 {
@@ -519,23 +602,64 @@ namespace ConsoleDesafiosFor
                 NmrAtual++;
             }
 
-            Console.WriteLine($"O {n}-ésimo número primo é: {NmrAtual - 1}");
+            Console.WriteLine($"O {NmrAtual}-ésimo número primo é: {NmrAtual - 1}");
+            Console.ReadKey();
+            Console.Clear();
+
+            // Exercicio 29
+            // Faça um programa que leia uma string e conte o número de cada letra na string usando um loop foreach.
+            Console.WriteLine(" Um programa que leia uma string e conte o numero de cada letra na string usando loop foreach");
+            Console.WriteLine(" Digite uma palavra : ");
+            string inputPalavra = Console.ReadLine();
+            inputPalavra = inputPalavra.ToLower();
+            inputPalavra.ToCharArray();
+            Dictionary<char, int> contadorLetras = new Dictionary<char, int>();
+            foreach (char c in inputPalavra)
+            {
+                if (char.IsLetter(c) && char.IsLower(c))
+                {
+                    if (contadorLetras.ContainsKey(c))
+                    {
+                        contadorLetras[c]++;
+                    }
+                    else
+                    {
+                        contadorLetras[c] = 1;
+                    }
+                }
+            }
+            foreach(var letra in contadorLetras)
+            {
+                Console.WriteLine($" Letra : {letra.Key} aparece : {letra.Value} vezes / vez :  ");
+            }
             Console.ReadKey();
             Console.Clear();
 
 
 
-            // Faça um programa que leia uma string e conte o número de cada letra na string usando um loop foreach.
-            Console.WriteLine(" Um programa que leia uma string e conte o numero de cada letra na string usando loop foreach");
-            Console.WriteLine(" Digite uma palavra : ");
-
-
-
-
-
-
+            // Exercicio 30
             // Escreva um programa em C# que leia um texto e encontre a palavra mais frequente no texto usando um loop foreach.
 
+            Console.WriteLine(" Um programa em c# que leia um texto e encontre a palavra mais frequente no texto usando um loop foreach");
+
+            string texto = " o cachorro atravessa a rua, rua essa onde há outro cachorro, cachorro este igual aquele cachorro que briga com outros cachorros ";
+
+            var textoseparado = texto.Replace(',', ' ').Split(' ');
+
+            int contadorText = 0;
+
+
+            foreach (var cachorro in textoseparado)
+            {
+                if (cachorro == "cachorro")
+                {
+                    contadorText++;
+                }
+            }
+
+            Console.WriteLine($" O número de vezes que a palavra  aparece é de {contadorText} vezes.");
+            Console.ReadKey();
+            Console.Clear();
 
         }
     }
